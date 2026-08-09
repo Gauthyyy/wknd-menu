@@ -1,0 +1,132 @@
+{
+  "categories": [
+    {
+      "id": "rolls",
+      "name": "Rolls",
+      "items": [
+        { "id": "r1", "name": "Chilly Chicken Rumali", "price": 80, "type": "non-veg" },
+        { "id": "r2", "name": "Zinger Chicken Roll", "price": 110, "type": "non-veg" },
+        { "id": "r3", "name": "Pepper Chicken Roll", "price": 80, "type": "non-veg" },
+        { "id": "r4", "name": "Veg Roll", "price": 70, "type": "veg" },
+        { "id": "r5", "name": "Falafel Roll", "price": 70, "type": "veg" },
+        { "id": "r6", "name": "Jumbo Roll", "price": 150, "type": "non-veg" }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "name": "Sandwich",
+      "items": [
+        { "id": "s1", "name": "Chicken Sandwich", "price": 90, "type": "non-veg" },
+        { "id": "s2", "name": "Veg Sandwich", "price": 70, "type": "veg" },
+        { "id": "s3", "name": "Egg Sandwich", "price": 70, "type": "egg" },
+        { "id": "s4", "name": "Chicken Club", "price": 130, "type": "non-veg" },
+        { "id": "s5", "name": "Zinger Chicken Sandwich", "price": 150, "type": "non-veg" }
+      ]
+    },
+    {
+      "id": "burgers-loaded",
+      "name": "Burgers & Loaded",
+      "items": [
+        { "id": "b1", "name": "Chicken Burger", "price": 100, "type": "non-veg" },
+        { "id": "b2", "name": "Veg Burger", "price": 80, "type": "veg" },
+        { "id": "b3", "name": "Zinger Burger", "price": 180, "type": "non-veg" },
+        { "id": "b4", "name": "Cheese Burger", "price": 160, "type": "veg" },
+        { "id": "b5", "name": "Double Patty Burger", "price": 150, "type": "non-veg" },
+        { "id": "f1", "name": "Normal Fries", "price": 70, "type": "veg" },
+        { "id": "f2", "name": "Peri Peri Fries", "price": 100, "type": "veg" },
+        { "id": "f3", "name": "Cheese Fries", "price": 120, "type": "veg" },
+        { "id": "f4", "name": "Loaded Fries", "price": 180, "type": "non-veg" },
+        { "id": "f5", "name": "Cheese Loaded Fries", "price": 200, "type": "non-veg" }
+      ]
+    },
+    {
+      "id": "kulukki",
+      "name": "Kulukki",
+      "subgroups": [
+        {
+          "title": "Spicy Kulukki",
+          "items": [
+            { "id": "k1", "name": "Pachamanga Kulukki", "price": 60 },
+            { "id": "k2", "name": "Passion Fruit Kulukki", "price": 60 },
+            { "id": "k3", "name": "Orange Kulukki", "price": 60 },
+            { "id": "k4", "name": "Pineapple Kulukki", "price": 60 },
+            { "id": "k5", "name": "Grape Kulukki", "price": 60 }
+          ]
+        },
+        {
+          "title": "Sweet Kulukki",
+          "items": [
+            { "id": "k6", "name": "Milk Sarbath", "price": 50 },
+            { "id": "k7", "name": "Boost Kulukki", "price": 50 },
+            { "id": "k8", "name": "Horlicks Kulukki", "price": 50 },
+            { "id": "k9", "name": "Strawberry Kulukki", "price": 50 },
+            { "id": "k10", "name": "Butterscotch Kulukki", "price": 50 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mojitos-limes",
+      "name": "Mojito & Lime",
+      "items": [
+        { "id": "m1", "name": "Blue Karaoke Mojito", "price": 90 },
+        { "id": "m2", "name": "Mango Mojito", "price": 90 },
+        { "id": "m3", "name": "Green Apple Mojito", "price": 90 },
+        { "id": "m4", "name": "Orange Mojito", "price": 90 },
+        { "id": "m5", "name": "Passion Fruit Mojito", "price": 90 },
+        { "id": "m6", "name": "Strawberry Mojito", "price": 90 },
+        { "id": "m7", "name": "Watermelon Mojito", "price": 90 },
+        { "id": "l1", "name": "Normal Lime", "price": 25 },
+        { "id": "l2", "name": "Grape Lime", "price": 30 },
+        { "id": "l3", "name": "Mint Lime", "price": 30 },
+        { "id": "l4", "name": "Pineapple Lime", "price": 30 }
+      ]
+    },
+    {
+      "id": "shakes",
+      "name": "Shakes & Signatures",
+      "items": [
+        { "id": "sh1", "name": "Apple Shake", "price": 70 },
+        { "id": "sh2", "name": "Shamam Shake", "price": 70 },
+        { "id": "sh3", "name": "Dates Shake", "price": 80 },
+        { "id": "sh4", "name": "Chikoo Shake", "price": 70 },
+        { "id": "sh5", "name": "Papaya Shake", "price": 80 },
+        { "id": "sh6", "name": "Mango Shake", "price": 70 },
+        { "id": "sh7", "name": "Kitkat Shake", "price": 70 },
+        { "id": "sh8", "name": "Snickers Shake", "price": 80 },
+        { "id": "sh9", "name": "Pomegranate Shake", "price": 70 },
+        { "id": "sh10", "name": "Sharjah Shake", "price": 70 },
+        { "id": "sh11", "name": "Vanilla Shake", "price": 70 },
+        { "id": "sh12", "name": "Cold Coffee", "price": 80 },
+        { "id": "sh13", "name": "Dark Fantasy Shake", "price": 70 },
+        { "id": "sh14", "name": "Oreo Shake", "price": 70 },
+        { "id": "sh15", "name": "Avocado Shake", "price": 80 },
+        { "id": "sh16", "name": "Strawberry Shake", "price": 70 },
+        { "id": "ss1", "name": "Roasted Cashew (Signature)", "price": 100 },
+        { "id": "ss2", "name": "Kadi Shake / Dry Fruits (Signature)", "price": 90 },
+        { "id": "ss3", "name": "Mixed Cocktail (Signature)", "price": 70 },
+        { "id": "ss4", "name": "Double Mix (Signature)", "price": 70 },
+        { "id": "ss5", "name": "Tender Coconut (Signature)", "price": 60 }
+      ]
+    },
+    {
+      "id": "juices",
+      "name": "Fresh Juices",
+      "items": [
+        { "id": "j1", "name": "Mosambi Juice", "price": 50 },
+        { "id": "j2", "name": "Watermelon Juice", "price": 50 },
+        { "id": "j3", "name": "Orange Juice", "price": 60 },
+        { "id": "j4", "name": "Pineapple Juice", "price": 50 },
+        { "id": "j5", "name": "Grape Juice", "price": 50 },
+        { "id": "j6", "name": "Pomegranate Juice", "price": 60 },
+        { "id": "j7", "name": "Shamam Juice", "price": 60 },
+        { "id": "j8", "name": "Mango Juice", "price": 60 },
+        { "id": "j9", "name": "Apple Juice", "price": 60 },
+        { "id": "fj1", "name": "Fresh Orange", "price": 90 },
+        { "id": "fj2", "name": "Fresh Carrot", "price": 80 },
+        { "id": "fj3", "name": "Fresh Pineapple", "price": 100 },
+        { "id": "fj4", "name": "ABC Juice (Apple Beetroot Carrot)", "price": 80 }
+      ]
+    }
+  ]
+}

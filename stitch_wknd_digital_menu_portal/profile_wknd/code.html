@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WKND - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&amp;family=Montserrat:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#523785",
+                        "on-primary-fixed": "#23123c",
+                        "surface": "#121414",
+                        "on-secondary-fixed-variant": "#504700",
+                        "on-primary-container": "#8a76a7",
+                        "surface-variant": "#333535",
+                        "on-surface": "#e2e2e2",
+                        "on-primary-fixed-variant": "#503e6b",
+                        "outline-variant": "#4a454e",
+                        "surface-container-highest": "#333535",
+                        "surface-container-low": "#1a1c1c",
+                        "tertiary": "#d3bbff",
+                        "secondary": "#ffffff",
+                        "primary-fixed": "#eddcff",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#695684",
+                        "secondary-fixed": "#fde400",
+                        "on-secondary-container": "#716500",
+                        "on-error": "#690005",
+                        "surface-tint": "#d4bdf2",
+                        "background": "#121414",
+                        "tertiary-fixed-dim": "#d3bbff",
+                        "on-surface-variant": "#cbc4cf",
+                        "on-secondary-fixed": "#201c00",
+                        "on-secondary": "#373100",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#2f3131",
+                        "on-primary": "#392853",
+                        "secondary-fixed-dim": "#dec800",
+                        "on-background": "#e2e2e2",
+                        "secondary-container": "#fde400",
+                        "outline": "#958e98",
+                        "primary": "#d4bdf2",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#3b1f6d",
+                        "on-tertiary-container": "#8c70c2",
+                        "on-tertiary-fixed": "#250158",
+                        "primary-container": "#1c0a35",
+                        "tertiary-fixed": "#ebddff",
+                        "surface-dim": "#121414",
+                        "surface-container": "#1e2020",
+                        "surface-container-lowest": "#0c0f0f",
+                        "primary-fixed-dim": "#d4bdf2",
+                        "tertiary-container": "#1d0048",
+                        "surface-container-high": "#282a2b",
+                        "inverse-surface": "#e2e2e2",
+                        "surface-bright": "#37393a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "24px",
+                        "section-gap": "64px",
+                        "base": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background-color: rgba(28, 10, 53, 0.6); /* Deep purple base with opacity */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(253, 228, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-primary-container text-on-surface font-body-md text-body-md min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-white/10">
+<div class="flex justify-between items-center px-container-margin h-16 w-full">
+<button class="text-secondary hover:opacity-80 transition-opacity active:scale-95 transition-transform md:hidden">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="hidden md:flex items-center gap-gutter text-on-surface-variant font-label-caps text-label-caps">
+<a class="hover:text-secondary transition-colors" href="#">Menu</a>
+<a class="hover:text-secondary transition-colors" href="#">Orders</a>
+<a class="hover:text-secondary transition-colors" href="#">Cart</a>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tighter text-secondary-fixed md:font-headline-lg md:text-headline-lg mx-auto md:mx-0">WKND</h1>
+<button class="w-10 h-10 rounded-full overflow-hidden border border-white/10 hover:opacity-80 transition-opacity active:scale-95 transition-transform ring-2 ring-secondary-fixed ring-offset-2 ring-offset-primary-container">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="A cinematic, high-contrast portrait of a stylish young adult in a neon-lit nightlife environment, deeply shadowed with vivid yellow and purple highlights, representing a premium user avatar for an after-hours app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcCBYtznjy5dafH79onwv5cUmfSee5xhF44fhZGhXHvwzlwC56pyXZIr0fDJ7X_g3a5S4a0DV5V0JXaQdrW-b7rE7FocuErJrge4OwhbNGQTsIyidB9sSjo-PGQu4y5cVki-LfbtJ-z4oKb6sgx4nMsjtmQDDWKHD1COrZF5jaFGUBY0OetlB6im3_SVIQarusWAdfIzWfoASGemLfPT8xf3671oVI3xp1AdpjMi-VSDFuIJXYFD_D2A"/>
+</button>
+</div>
+</header>
+<main class="pt-24 px-gutter md:px-container-margin max-w-5xl mx-auto">
+<!-- Profile Hero -->
+<section class="flex flex-col items-center justify-center text-center mb-section-gap">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-secondary-fixed mb-container-margin neon-glow">
+<img alt="Alex Chen" class="w-full h-full object-cover" data-alt="A cinematic, high-contrast portrait of a stylish young adult in a neon-lit nightlife environment, deeply shadowed with vivid yellow and purple highlights, representing a premium user avatar for an after-hours app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0akES4MGxa5KmElJmkvB5zqh0-lkWT-7lNwpd5c1vx6IRG3jyVF5eeNnLmxvpQNLYusmY2is_vVXeep-GJoiLar-OFDq5FWJnUFpgKbYjt356OVJBXHKxiWEQpuI_AVN-zKtnjC1iPyxMKlGHd6Jt3_V9p1gEhWxsu61XefOJCP4rtuCEO4yPAMT8ICTgsgkmjmmTaoAdswWtFrGzvPGOIu4GjhV6cF8UObrUm8u3jZ-kzEw_jZ9edQ"/>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-secondary-fixed mb-base">Alex Chen</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant">alex.chen@example.com</p>
+<div class="mt-gutter flex gap-base">
+<span class="glass-panel px-4 py-1 rounded-full font-label-caps text-label-caps text-secondary-fixed border-secondary-fixed/50">VIP Member</span>
+<span class="glass-panel px-4 py-1 rounded-full font-label-caps text-label-caps text-on-surface">Night Owl</span>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:gap-container-margin">
+<!-- Saved Addresses -->
+<div class="glass-panel rounded-xl p-container-margin md:col-span-7 flex flex-col gap-container-margin">
+<div class="flex justify-between items-center border-b border-white/10 pb-base">
+<h3 class="font-headline-md text-headline-md text-on-surface">Addresses</h3>
+<button class="text-secondary-fixed hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<div class="flex gap-gutter items-start p-base hover:bg-white/5 rounded-lg transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant mt-1 group-hover:text-secondary-fixed transition-colors" data-icon="home">home</span>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md font-semibold text-on-surface">The Loft</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">124 Neon Blvd, Apt 402<br/>Cyber City, CC 90210</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined" data-icon="delete">delete</span></button>
+</div>
+<div class="flex gap-gutter items-start p-base hover:bg-white/5 rounded-lg transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant mt-1 group-hover:text-secondary-fixed transition-colors" data-icon="work">work</span>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md font-semibold text-on-surface">Studio</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">88 Synthway, Suite B<br/>Cyber City, CC 90212</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined" data-icon="delete">delete</span></button>
+</div>
+</div>
+<!-- Payment Methods -->
+<div class="glass-panel rounded-xl p-container-margin md:col-span-5 flex flex-col gap-container-margin">
+<div class="flex justify-between items-center border-b border-white/10 pb-base">
+<h3 class="font-headline-md text-headline-md text-on-surface">Payment</h3>
+<button class="text-secondary-fixed hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<div class="relative w-full h-40 rounded-lg overflow-hidden flex flex-col justify-between p-gutter bg-gradient-to-br from-surface-container-high to-surface-container-lowest border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="credit_card">credit_card</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Default</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps tracking-widest text-on-surface mb-1">**** **** **** 4291</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Exp 12/26</p>
+</div>
+</div>
+<button class="w-full py-3 px-4 border border-secondary-fixed/50 rounded-lg text-secondary-fixed font-label-caps text-label-caps hover:bg-secondary-fixed/10 transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="account_balance_wallet">account_balance_wallet</span>
+                    Manage Wallet
+                </button>
+</div>
+<!-- Settings & Preferences -->
+<div class="glass-panel rounded-xl p-container-margin md:col-span-12 mt-gutter">
+<h3 class="font-headline-md text-headline-md text-on-surface border-b border-white/10 pb-base mb-container-margin">Preferences</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<a class="flex items-center gap-gutter p-gutter rounded-lg hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 group" href="#">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-secondary-fixed group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md font-semibold">Notifications</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Push &amp; SMS</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="flex items-center gap-gutter p-gutter rounded-lg hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 group" href="#">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-secondary-fixed group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md font-semibold">Security</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Password &amp; 2FA</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="flex items-center gap-gutter p-gutter rounded-lg hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 group" href="#">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-secondary-fixed group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md font-semibold">Support</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">FAQ &amp; Contact</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-12 mt-container-margin">
+<button class="w-full md:w-auto md:px-12 py-4 bg-error text-on-error font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity flex justify-center items-center gap-2">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Sign Out
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/85 backdrop-blur-md border-t border-white/10 shadow-[0_-4px_20px_rgba(253,228,0,0.1)] flex justify-around items-center h-20 pb-safe px-base">
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-secondary transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-label-caps text-label-caps mt-1">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-secondary transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-caps text-label-caps mt-1">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-secondary transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-caps text-label-caps mt-1">Cart</span>
+</a>
+<!-- Active State: Profile -->
+<a class="flex flex-col items-center justify-center text-secondary-fixed border-t-2 border-secondary-fixed pt-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

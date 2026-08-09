@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WKND - Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Work+Sans:wght@400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#523785",
+                        "on-primary-fixed": "#23123c",
+                        "surface": "#121414",
+                        "on-secondary-fixed-variant": "#504700",
+                        "on-primary-container": "#8a76a7",
+                        "surface-variant": "#333535",
+                        "on-surface": "#e2e2e2",
+                        "on-primary-fixed-variant": "#503e6b",
+                        "outline-variant": "#4a454e",
+                        "surface-container-highest": "#333535",
+                        "surface-container-low": "#1a1c1c",
+                        "tertiary": "#d3bbff",
+                        "secondary": "#ffffff",
+                        "primary-fixed": "#eddcff",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#695684",
+                        "secondary-fixed": "#fde400",
+                        "on-secondary-container": "#716500",
+                        "on-error": "#690005",
+                        "surface-tint": "#d4bdf2",
+                        "background": "#121414",
+                        "tertiary-fixed-dim": "#d3bbff",
+                        "on-surface-variant": "#cbc4cf",
+                        "on-secondary-fixed": "#201c00",
+                        "on-secondary": "#373100",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#2f3131",
+                        "on-primary": "#392853",
+                        "secondary-fixed-dim": "#dec800",
+                        "on-background": "#e2e2e2",
+                        "secondary-container": "#fde400",
+                        "outline": "#958e98",
+                        "primary": "#d4bdf2",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#3b1f6d",
+                        "on-tertiary-container": "#8c70c2",
+                        "on-tertiary-fixed": "#250158",
+                        "primary-container": "#1c0a35",
+                        "tertiary-fixed": "#ebddff",
+                        "surface-dim": "#121414",
+                        "surface-container": "#1e2020",
+                        "surface-container-lowest": "#0c0f0f",
+                        "primary-fixed-dim": "#d4bdf2",
+                        "tertiary-container": "#1d0048",
+                        "surface-container-high": "#282a2b",
+                        "inverse-surface": "#e2e2e2",
+                        "surface-bright": "#37393a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "24px",
+                        "section-gap": "64px",
+                        "base": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #1C0A35;
+        }
+        .glass-card {
+            background: rgba(38, 19, 66, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(253, 228, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="text-on-surface font-body-md min-h-screen pb-32">
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md dark:bg-surface/85 border-b border-white/10 flex justify-between items-center px-container-margin h-16 w-full">
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center justify-center w-10 h-10 rounded-full text-secondary dark:text-secondary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tighter text-secondary-fixed dark:text-secondary-fixed">WKND</h1>
+<div class="hover:opacity-80 transition-opacity active:scale-95 transition-transform w-10 h-10 rounded-full overflow-hidden border border-white/10">
+<img class="w-full h-full object-cover" data-alt="A close up, high quality, well lit profile picture of a young adult looking trendy and confident, styled for a late-night culinary app user profile, vaporwave neon lighting accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6g3oA4z5xnBikX--1RvXfyLboNT-iJnWnMpG7ikJeuLQCiMmIbclBDuFFHOesoF_vTRsp-IpiMSMsIP9Ju3F29Wi_Oh54KI5f3QjNnKjZXf_IBkU5bN-jD6sApDVFrQpQWXryBtPGql9KigrwccX1bABG7mhBzpUqB_xd4vyjUtI9aM8dvgOh1R0pXEqqgMY-OAEEpCobxS8QnCLQ9aXyIUEs82JhV1tj5TBhHj1Wcb0OgpOo9nThEA"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-container-margin max-w-4xl mx-auto space-y-section-gap">
+<!-- Cart Items Section -->
+<section class="space-y-6">
+<h2 class="font-headline-md text-headline-md text-secondary mb-6">Your Cart</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Cart Item 1 -->
+<article class="glass-card rounded-xl p-4 flex gap-4">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A highly stylized, mouth-watering close up of a spicy Zinger Chicken Roll with crispy fried chicken, fresh lettuce, and creamy sauce wrapped in a warm flatbread, dramatically lit in a dark moody setting with neon purple and yellow highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi68wNeh7M0_txLisgJ1q3w0t4qYOZpAjjkfHcH3ioz3ZitM5WPt8htFPZMdzey-a3tDjLLN-CnfBq5OndMJcN6FDjsgDjY11rQBsHouYAeJGmj5ufE4793Fx0MHAbmwDXLR9cVyKYbtniB3ZPac-qdQJ7XnQ4BH84q6w59yfM31dIxUMuvcm2RVX5O2EeCaBTXszUdLQh48KoWjgduJfyD7xB5f9te47iMWFiNU_ZceFWlS0scbJjCA"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary text-lg">Zinger Chicken Roll</h3>
+<p class="font-body-sm text-on-surface-variant line-clamp-1">Spicy crispy chicken wrap</p>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="font-label-caps text-label-caps text-secondary-fixed">$8.50</span>
+<div class="flex items-center gap-3 bg-surface-container-high rounded-full px-2 py-1">
+<button class="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="font-body-md text-on-surface w-4 text-center">2</span>
+<button class="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+</article>
+<!-- Cart Item 2 -->
+<article class="glass-card rounded-xl p-4 flex gap-4">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A refreshing, glowing blue karaoke mojito cocktail in a tall glass with ice and a lime wheel, photographed against a dark background with vibrant neon nightclub lighting reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr7sapvzcUo2TNSHi4nPsGpWKWVQDuCsEvb6U7WFIWoQgWMG3iTkXV24p0vzVLCu1xl7RMWjM5UV2_d6MGyD4bCXM6idw5zZJKGoTtGtpt2LcwHhh4NhvCoXf9Kx-7NndsQlPXJFSlxegZ-AekdLASMKPiJNd2pGeKBsTRvNCIU37a60miRtcLEWgYlKaFUbqFacTL8HSWHdk9y7jT9Nm-FPaaXtEv-AwtPCaw1jv8bnj2yyAN8WBFWw"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary text-lg">Blue Karaoke Mojito</h3>
+<p class="font-body-sm text-on-surface-variant line-clamp-1">Signature blue curacao blend</p>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="font-label-caps text-label-caps text-secondary-fixed">$12.00</span>
+<div class="flex items-center gap-3 bg-surface-container-high rounded-full px-2 py-1">
+<button class="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="font-body-md text-on-surface w-4 text-center">1</span>
+<button class="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Summary & Checkout Section -->
+<section class="glass-card rounded-xl p-6 space-y-6">
+<div class="space-y-3">
+<div class="flex justify-between text-on-surface-variant font-body-md">
+<span>Subtotal</span>
+<span>$29.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-body-md">
+<span>Late Night Delivery Fee</span>
+<span>$4.50</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-body-md">
+<span>Tax</span>
+<span>$2.68</span>
+</div>
+<div class="border-t border-white/10 pt-4 flex justify-between items-end">
+<span class="font-headline-md text-headline-md text-secondary">Total</span>
+<span class="font-headline-md text-headline-md text-secondary-fixed">$36.18</span>
+</div>
+</div>
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed font-headline-md text-headline-md py-4 rounded-lg neon-glow active:scale-95 transition-transform hover:opacity-90">
+                Checkout
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component) - Rendered for Mobile only conceptually based on classes, but visible here -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/85 backdrop-blur-md dark:bg-surface/85 border-t border-white/10 shadow-[0_-4px_20px_rgba(253,228,0,0.1)] flex justify-around items-center w-full h-20 pb-safe px-base font-label-caps text-label-caps">
+<button class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-secondary transition-colors active:scale-90 transition-transform">
+<span class="material-symbols-outlined mb-1" data-icon="restaurant_menu">restaurant_menu</span>
+<span>Menu</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-secondary transition-colors active:scale-90 transition-transform">
+<span class="material-symbols-outlined mb-1" data-icon="receipt_long">receipt_long</span>
+<span>Orders</span>
+</button>
+<!-- Active Tab: Cart -->
+<button class="flex flex-col items-center justify-center text-secondary-fixed border-t-2 border-secondary-fixed pt-2 hover:text-secondary transition-colors active:scale-90 transition-transform">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_cart" data-weight="fill" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<span>Cart</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:text-secondary transition-colors active:scale-90 transition-transform">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span>Profile</span>
+</button>
+</nav>
+</body></html>

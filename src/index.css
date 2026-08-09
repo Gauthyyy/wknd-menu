@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #1C0A35;
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(42, 8, 92, 0.6) 0px, transparent 50%),
+      radial-gradient(at 85% 85%, rgba(38, 19, 66, 0.7) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: #E2E2E2;
+  }
+}
+
+/* Custom Scrollbar utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism styling */
+.glass-card {
+  background: rgba(38, 19, 66, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav {
+  background: rgba(28, 10, 53, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Neon Glow Effect */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(255, 230, 0, 0.3);
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 30px rgba(255, 230, 0, 0.5);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 12px rgba(255, 230, 0, 0.6);
+}
+
+/* Keyframes for pulse */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 230, 0, 0.6);
+  }
+}
+
+.animate-neon-pulse {
+  animation: neonPulse 2.5s infinite ease-in-out;
+}
